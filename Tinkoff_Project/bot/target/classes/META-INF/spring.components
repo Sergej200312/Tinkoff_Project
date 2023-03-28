@@ -1,0 +1,4 @@
+configuration.ApplicationConfig=org.springframework.boot.context.properties.ConfigurationProperties
+controller.BotExceptionHandler=org.springframework.stereotype.Component
+controller.UpdatesController=org.springframework.stereotype.Component
+org.example.BotApplication=org.springframework.stereotype.Component,org.springframework.boot.SpringBootConfiguration

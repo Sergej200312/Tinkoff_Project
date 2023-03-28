@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "bot",
+      "type": "configuration.ApplicationConfig",
+      "sourceType": "configuration.ApplicationConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "bot.test",
+      "type": "java.lang.String",
+      "sourceType": "configuration.ApplicationConfig"
+    }
+  ],
+  "hints": []
+}
