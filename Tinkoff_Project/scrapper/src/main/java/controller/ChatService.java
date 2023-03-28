@@ -1,5 +1,7 @@
 package controller;
 
+import DTO.ChatResponse;
+
 import java.util.ArrayList;
 
 public class ChatService {

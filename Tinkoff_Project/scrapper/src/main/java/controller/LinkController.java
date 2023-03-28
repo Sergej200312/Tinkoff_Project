@@ -1,23 +1,27 @@
 package controller;
 
+import DTO.LinkResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 
 import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/links")
 public class LinkController {
+
     @Autowired
     private LinkService linkService;
-    @GetMapping
+    @GetMapping("/{id}")
     public ResponseEntity<ArrayList<LinkResponse>> getAllLinks() {
         ArrayList<LinkResponse> links = linkService.getAllLinks();
         return ResponseEntity.ok(links);
     }
 
-    @PostMapping
+    @PostMapping("/{id}")
     public ResponseEntity<?> addLink(@RequestBody LinkResponse link) {
         if (link == null || link.getUrl() == null || link.getName() == null) {
             return ResponseEntity.badRequest().build();
@@ -26,7 +30,7 @@ public class LinkController {
         linkService.addLink(link);
         return ResponseEntity.ok().build();
     }
-    @DeleteMapping("/links")
+    @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteLink(@PathVariable Long id) {
         if (id == null) {
             return ResponseEntity.badRequest().build();

@@ -1,5 +1,7 @@
 package controller;
 
+import DTO.LinkResponse;
+
 import java.util.ArrayList;
 
 public class LinkService {
