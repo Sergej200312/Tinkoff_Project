@@ -1,0 +1,7 @@
+bot:
+  test: "Hello"
+
+spring-doc:
+    swagger-ui:
+      path: "/swagger-ui"
+
