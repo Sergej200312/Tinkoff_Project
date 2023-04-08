@@ -1,0 +1,7 @@
+configuration.ApplicationConfig=org.springframework.boot.context.properties.ConfigurationProperties
+configuration.ClientConfiguration=org.springframework.stereotype.Component
+controller.ChatController=org.springframework.stereotype.Component
+controller.LinkController=org.springframework.stereotype.Component
+controller.LinksController=org.springframework.stereotype.Component
+org.example.ScrapperApplication=org.springframework.stereotype.Component,org.springframework.boot.SpringBootConfiguration
+scheduler.LinkUpdaterScheduler=org.springframework.stereotype.Component

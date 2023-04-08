@@ -1,0 +1,15 @@
+configuration.ApplicationConfig=org.springframework.boot.context.properties.ConfigurationProperties
+configuration.BotConfig=org.springframework.stereotype.Component
+configuration.ClientsConfiguration=org.springframework.stereotype.Component
+controller.BotController=org.springframework.stereotype.Component
+controller.BotExceptionHandler=org.springframework.stereotype.Component
+controller.UpdatesController=org.springframework.stereotype.Component
+org.example.BotApplication=org.springframework.stereotype.Component,org.springframework.boot.SpringBootConfiguration
+telegram.LinksNotifierBot=org.springframework.stereotype.Component
+telegram.commands.CommandFactory=org.springframework.stereotype.Component
+telegram.commands.HelpCommand=org.springframework.stereotype.Component
+telegram.commands.ListCommand=org.springframework.stereotype.Component
+telegram.commands.StartCommand=org.springframework.stereotype.Component
+telegram.commands.TrackCommand=org.springframework.stereotype.Component
+telegram.commands.UndefinedCommand=org.springframework.stereotype.Component
+telegram.commands.UntrackCommand=org.springframework.stereotype.Component
