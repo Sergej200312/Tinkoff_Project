@@ -1,14 +1,19 @@
 {
   "groups": [
     {
-      "name": "bot",
+      "name": "app",
       "type": "configuration.ApplicationConfig",
       "sourceType": "configuration.ApplicationConfig"
     }
   ],
   "properties": [
     {
-      "name": "bot.test",
+      "name": "app.scrapper-base-url",
+      "type": "java.lang.String",
+      "sourceType": "configuration.ApplicationConfig"
+    },
+    {
+      "name": "app.test",
       "type": "java.lang.String",
       "sourceType": "configuration.ApplicationConfig"
     }

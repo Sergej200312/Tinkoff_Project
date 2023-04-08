@@ -1,5 +1,6 @@
 package controller;
 
+import DTO.ChatRequest;
 import DTO.ChatResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,37 +9,23 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@AllArgsConstructor
+@RequestMapping("/chat")
 public class ChatController {
-    @Autowired
-    private ChatService chatService;
 
-
-
-    @PostMapping("/tg-chat/{id}")
-    public ResponseEntity<?> registerChat(@RequestBody ChatResponse chat) {
-        if (chat.getName() == null || chat.getUsers() == null) {
-            return ResponseEntity.badRequest().build();
-        }
-
-        return ResponseEntity.ok().build();
+    @PostMapping
+    public ChatResponse createChat(@RequestBody ChatRequest chatRequest) {
+        // создание чата в базе данных
+        ChatResponse chatResponse = new ChatResponse();
+        chatResponse.setId(1L);
+        chatResponse.setName(chatRequest.getName());
+        chatResponse.setDescription(chatRequest.getDescription());
+        chatResponse.setMembers(chatRequest.getMembers());
+        return chatResponse;
     }
 
-
-
-
-        @DeleteMapping("/tg-chat/{id}")
-        public ResponseEntity<?> deleteChat(@PathVariable Long id) {
-            if (id == null) {
-                return ResponseEntity.badRequest().build();
-            }
-
-            boolean deleted = chatService.deleteChat(id);
-            if (!deleted) {
-                return ResponseEntity.notFound().build();
-            }
-
-            return ResponseEntity.ok().build();
-        }
+    @DeleteMapping("/{chatId}")
+    public ResponseEntity<Void> deleteChat(@PathVariable Long chatId) {
+        // удаление чата из базы данных
+        return ResponseEntity.noContent().build();
     }
-
+}

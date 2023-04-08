@@ -5,9 +5,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class LinkResponse {
-    private Long id;
-    private String url;
 
-    private String name;
-}
+    public record LinkResponse(
+            long id,
+            String url
+    ) {
+    }
+

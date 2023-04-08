@@ -1,5 +1,14 @@
+app:
+  test: 1
+  telegram-token: 6063694409:AAEodzBg_j3XGa0e2V0Dr0YmvWXE7tSH2ms
+  base-url-scrapper: http://localhost:8080
+
+server:
+  port: 8081
+
 bot:
-  test: "Hello"
+  telegram_token: 6063694409:AAEodzBg_j3XGa0e2V0Dr0YmvWXE7tSH2ms
+
 
 spring-doc:
     swagger-ui:
