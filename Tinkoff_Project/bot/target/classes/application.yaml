@@ -6,6 +6,9 @@ app:
 server:
   port: 8081
 
+bot:
+  telegram_token: 6063694409:AAEodzBg_j3XGa0e2V0Dr0YmvWXE7tSH2ms
+
 
 spring-doc:
     swagger-ui:
