@@ -1,5 +1,6 @@
-package domains.DAO;
+package domains.repository;
 
+import domains.DAO.TgUserDAO;
 import domains.TgUser;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -8,12 +9,11 @@ import org.springframework.stereotype.Repository;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.util.List;
-
 @Repository
-public class TgUserDAOImpl implements TgUserDAO{
+public class TgUserRepository implements TgUserDAO {
     private final JdbcTemplate jdbcTemplate;
 
-    public TgUserDAOImpl(JdbcTemplate jdbcTemplate) {
+    public TgUserRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 

@@ -1,5 +1,6 @@
-package domains.DAO;
+package domains.repository;
 
+import domains.DAO.LinkSubscriptionDAO;
 import domains.LinkSubscription;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -9,11 +10,12 @@ import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.List;
+
 @Repository
-public class LinkSubscriptionDAOImpl implements LinkSubscriptionDAO{
+public class LinkSubscriptionRepository implements LinkSubscriptionDAO {
     private final JdbcTemplate jdbcTemplate;
 
-    public LinkSubscriptionDAOImpl(JdbcTemplate jdbcTemplate) {
+    public LinkSubscriptionRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
