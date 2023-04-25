@@ -1,0 +1,8 @@
+scrapper:
+  test: hi
+  scheduler:
+    interval: 5000
+
+spring-doc:
+  swagger-ui:
+    path: "/swagger-ui"
