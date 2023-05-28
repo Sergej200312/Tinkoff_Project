@@ -1,0 +1,40 @@
+app:
+  telegram-token: 6063694409:AAEodzBg_j3XGa0e2V0Dr0YmvWXE7tSH2ms
+  base-url-scrapper: http://localhost:8080
+
+server:
+  port: 8081
+
+bot:
+  telegram_token: 6063694409:AAEodzBg_j3XGa0e2V0Dr0YmvWXE7tSH2ms
+
+
+spring-doc:
+    swagger-ui:
+      path: "/swagger-ui"
+
+management:
+  server:
+    port: 8081
+
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: info, health, prometheus
+
+  endpoint:
+    health:
+      show-details: always
+      path: /health
+
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+  export:
+    prometheus:
+      enabled: true
+      step: 30s
+      path: /metrics
+
