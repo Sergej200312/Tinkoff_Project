@@ -14,7 +14,7 @@ public class ClientsConfiguration {
     @Bean
     ScrapperClient scrapperClient(ApplicationConfig appConfig) {
         WebClient webClient = WebClient.builder()
-                .baseUrl(appConfig.scrapperBaseUrl().isBlank() ? SCRAPPER_CLIENT_DEFAULT_URL : appConfig.scrapperBaseUrl())
+                .baseUrl(appConfig.baseUrlScrapper().isBlank() ? SCRAPPER_CLIENT_DEFAULT_URL : appConfig.baseUrlScrapper())
                 .build();
         HttpServiceProxyFactory factory = HttpServiceProxyFactory.builder(WebClientAdapter.forClient(webClient)).build();
         return factory.createClient(ScrapperClient.class);

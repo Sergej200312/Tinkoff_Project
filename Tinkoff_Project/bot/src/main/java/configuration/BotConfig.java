@@ -9,6 +9,6 @@ import org.springframework.context.annotation.Configuration;
 @Getter
 @Setter
 public class BotConfig {
-    @Value("${bot.token}")
+    @Value("${bot.telegram_token}")
     String token;
 }
